@@ -1,0 +1,76 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Tue May 29 11:45:21 2018
+| Host         : Casi-PC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file test_env_control_sets_placed.rpt
+| Design       : test_env
+| Device       : xc7a35t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    14 |
+| Unused register locations in slices containing registers |    73 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              35 |           11 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              16 |            4 |
+| Yes          | No                    | No                     |               9 |            9 |
+| Yes          | No                    | Yes                    |              67 |           25 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------+----------------------------------+------------------+----------------+
+|  Clock Signal  |              Enable Signal              |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
++----------------+-----------------------------------------+----------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | pp1/eqOp                                |                                  |                1 |              1 |
+|  clk_IBUF_BUFG | rx_fsm1/rx_data[1]_i_1_n_0              |                                  |                1 |              1 |
+|  clk_IBUF_BUFG | rx_fsm1/rx_data[3]_i_1_n_0              |                                  |                1 |              1 |
+|  clk_IBUF_BUFG | rx_fsm1/rx_data[4]_i_1_n_0              |                                  |                1 |              1 |
+|  clk_IBUF_BUFG | rx_fsm1/rx_data[5]_i_1_n_0              |                                  |                1 |              1 |
+|  clk_IBUF_BUFG | rx_fsm1/rx_data[6]_i_1_n_0              |                                  |                1 |              1 |
+|  clk_IBUF_BUFG | rx_fsm1/rx_data[0]_i_1_n_0              |                                  |                1 |              1 |
+|  clk_IBUF_BUFG | rx_fsm1/rx_data[2]_i_1_n_0              |                                  |                1 |              1 |
+|  clk_IBUF_BUFG | rx_fsm1/rx_data[7]_i_1_n_0              |                                  |                1 |              1 |
+|  clk_IBUF_BUFG | rx_fsm1/FSM_sequential_state[2]_i_1_n_0 | mpg1/FSM_sequential_state_reg[0] |                2 |              3 |
+|  clk_IBUF_BUFG |                                         | clear                            |                4 |             16 |
+|  clk_IBUF_BUFG | rx_fsm1/BAUD_CNT[31]_i_1_n_0            | mpg1/FSM_sequential_state_reg[0] |               10 |             32 |
+|  clk_IBUF_BUFG | rx_fsm1/BIT_CNT[31]_i_1_n_0             | mpg1/FSM_sequential_state_reg[0] |               13 |             32 |
+|  clk_IBUF_BUFG |                                         |                                  |               11 |             35 |
++----------------+-----------------------------------------+----------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     9 |
+| 3      |                     1 |
+| 16+    |                     4 |
++--------+-----------------------+
+
+
